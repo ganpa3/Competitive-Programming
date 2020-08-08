@@ -1,4 +1,3 @@
-The repository consists of accepted solutions to the problems in competitive programming websites like Codeforces, Codechef, etc.
 # Competitive Programming
 * The repository consists of **Accepted** solutions of the problems asked in Online Judges/Competitive Programming websites like CodeChef, CodeForces, Hacker-Rank, etc.
 * To find out the problem statement related to solution, refer to the problem link at the top of source-code.  
