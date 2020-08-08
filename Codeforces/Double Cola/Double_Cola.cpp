@@ -21,6 +21,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+typedef long long ll;
 using namespace std;
 int main()
 {
