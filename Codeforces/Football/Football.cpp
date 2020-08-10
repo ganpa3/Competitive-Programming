@@ -1,5 +1,5 @@
 /*
-* Problem Statement: 
+* Problem Statement: https://codeforces.com/problemset/problem/96/A
 * Author: ganpa
 */
 #include <algorithm>
@@ -38,13 +38,9 @@ int main()
     {
         s1 = s.substr(i, 7);
         if (s1[0] == '0' && s1.find('1') == string::npos)
-        {
             ans = 1;
-        }
         if (s1[0] == '1' && s1.find('0') == string::npos)
-        {
             ans = 1;
-        }
     }
     if (ans)
         cout << "YES";

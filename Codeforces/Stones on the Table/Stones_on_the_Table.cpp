@@ -1,5 +1,5 @@
 /*
-* Problem Statement: 
+* Problem Statement: https://codeforces.com/problemset/problem/266/A
 * Author: ganpa
 */
 #include <algorithm>
