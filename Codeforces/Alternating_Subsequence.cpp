@@ -8,7 +8,8 @@ typedef long long ll;
 
 using namespace std;
 
-int main() {
+int main()
+{
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -21,17 +22,20 @@ int main() {
     };
     int tc;
     cin >> tc;
-    while (tc--) {
+    while (tc--)
+    {
         int n;
         cin >> n;
         vector<int> v(n);
-        for (int& it : v)
+        for (int &it : v)
             cin >> it;
         ll sum = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             int j = i;
             int curr = v[i];
-            while (j < n && check(v[i]) == check(v[j])) {
+            while (j < n && check(v[i]) == check(v[j]))
+            {
                 curr = max(curr, v[j]);
                 j++;
             }
