@@ -1,15 +1,9 @@
 /*
-* Problem Statement: 
+* Problem Statement: https://codeforces.com/contest/1325/problem/A 
 * Author: ganpa
 */
 #include <bits/stdc++.h>
 
-#define all(v) v.begin(), v.end()
-#define sz(x) (int)(x).size()
-#define endl '\n'
-typedef long long ll;
-typedef long double ld;
-typedef unsigned long long ull;
 using namespace std;
 
 int main()
@@ -19,5 +13,8 @@ int main()
     cin >> tc;
     while (tc--)
     {
+        int n;
+        cin >> n;
+        cout << 1 << " " << n - 1 << endl;
     }
 }
