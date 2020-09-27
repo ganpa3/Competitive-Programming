@@ -1,12 +1,13 @@
-/*
-* Problem Statement: 
-* Author: ganpa
-*/
+// Author: ganpa
+
 #include <bits/stdc++.h>
 
 #define sz(x) (int)(x).size()
 #define all(v) v.begin(), v.end()
 #define endl '\n'
+typedef vector<int> vi;
+typedef vector<long long> vll;
+typedef pair<int, int> pi;
 typedef long long int ll;
 typedef long double ld;
 typedef unsigned long long int ull;
