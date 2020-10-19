@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/1401/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/1401/A
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 #define endl '\n'

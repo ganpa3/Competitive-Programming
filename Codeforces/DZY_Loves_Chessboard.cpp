@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/445/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/445/A
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 #define sz(x) (int)(x).size()
@@ -11,8 +11,7 @@ typedef long double ld;
 typedef unsigned long long int ull;
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.in", "r", stdin);
 #endif
@@ -20,21 +19,15 @@ int main()
     int n, m;
     cin >> n >> m;
     vector<string> v(n);
-    for (int i = 0; i < n; ++i)
-        cin >> v[i];
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j < m; ++j)
-        {
-            if (i % 2 && v[i][j] == '.')
-            {
+    for (int i = 0; i < n; ++i) cin >> v[i];
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            if (i % 2 && v[i][j] == '.') {
                 if (j % 2 == 0)
                     v[i][j] = 'W';
                 else
                     v[i][j] = 'B';
-            }
-            else if (v[i][j] == '.')
-            {
+            } else if (v[i][j] == '.') {
                 if (j % 2 == 0)
                     v[i][j] = 'B';
                 else
@@ -42,10 +35,8 @@ int main()
             }
         }
     }
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j < m; ++j)
-        {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
             cout << v[i][j];
         }
         cout << endl;

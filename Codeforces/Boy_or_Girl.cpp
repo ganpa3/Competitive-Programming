@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/236/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/236/A
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -24,18 +24,15 @@
 typedef long long ll;
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
     ios_base::sync_with_stdio(false), cin.tie(NULL);
     string s, s1;
     cin >> s;
-    for (char i : s)
-    {
-        if (s1.find(i) == string::npos)
-            s1 += i;
+    for (char i : s) {
+        if (s1.find(i) == string::npos) s1 += i;
     }
     int n = s1.length();
     if (n % 2 == 0)

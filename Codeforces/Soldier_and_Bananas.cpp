@@ -1,7 +1,7 @@
 /*
  * Problem Statement: https://codeforces.com/problemset/problem/546/A
  * Author: ganpa
-*/
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,8 +26,7 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -38,10 +37,8 @@ int main()
     m *= k;
     if (w == 1 && n < k)
         cout << k - n;
-    else if (m > n)
-    {
+    else if (m > n) {
         cout << m - n;
-    }
-    else
+    } else
         cout << 0;
 }

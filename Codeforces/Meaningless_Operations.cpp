@@ -51,15 +51,12 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
-bool isPowerOf2(int n) {
-    return !(n & (n - 1));
-}
+bool isPowerOf2(int n) { return !(n & (n - 1)); }
 
-void solve() 
-{
+void solve() {
     int n;
     cin >> n;
-    if (isPowerOf2(n+1)) {
+    if (isPowerOf2(n + 1)) {
         int ans = 1;
         for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) {

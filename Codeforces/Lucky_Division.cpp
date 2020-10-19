@@ -1,7 +1,7 @@
 /*
  * Problem Statement: https://codeforces.com/problemset/problem/122/A
  * Author: ganpa
-*/
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,20 +26,18 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
     ios_base::sync_with_stdio(false), cin.tie(NULL);
-    vector<int> arr = {4, 7, 47, 74, 44, 77, 444, 777, 447, 477, 474, 774, 747, 744};
+    vector<int> arr = {4,   7,   47,  74,  44,  77,  444,
+                       777, 447, 477, 474, 774, 747, 744};
     int n;
     cin >> n;
     int m = 0;
-    for (int i : arr)
-    {
-        if (n % i == 0)
-        {
+    for (int i : arr) {
+        if (n % i == 0) {
             m = i;
             break;
         }

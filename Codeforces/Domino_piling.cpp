@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/50/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/50/A
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -24,8 +24,7 @@
 typedef long long ll;
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif

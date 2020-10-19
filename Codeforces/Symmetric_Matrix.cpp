@@ -8,26 +8,21 @@ typedef long double ld;
 typedef unsigned long long ull;
 using namespace std;
 
-void solve()
-{
+void solve() {
     int n, m;
     cin >> n >> m;
     bool ok = false;
     int a, b, c, d;
-    while (n--)
-    {
+    while (n--) {
         cin >> a >> b >> c >> d;
-        if (b == c)
-            ok = true;
+        if (b == c) ok = true;
     }
     puts(ok && m % 2 == 0 ? "YES" : "NO");
 }
 
-int main()
-{
+int main() {
     ios_base::sync_with_stdio(false), cin.tie(0), cout.tie(0);
     int tc = 1;
     cin >> tc;
-    while (tc--)
-        solve();
+    while (tc--) solve();
 }

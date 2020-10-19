@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/977/C
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/977/C
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 #define endl '\n'
@@ -10,8 +10,7 @@ typedef long double ld;
 typedef unsigned long long int ull;
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -19,13 +18,11 @@ int main()
     int n, k, ans = 0;
     cin >> n >> k;
     vector<int> v(n);
-    for (int &it : v)
-        cin >> it;
+    for (int &it : v) cin >> it;
     sort(v.begin(), v.end());
     if (k == 0)
         ans = v[0] - 1;
-    else
-    {
+    else {
         if (v[k - 1] == v[k])
             ans = -1;
         else

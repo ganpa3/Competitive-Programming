@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/1369/B
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/1369/B
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 typedef long long int ll;
@@ -16,8 +16,8 @@ bool check(string s) {
     }
     return false;
 }
-//break the array into three parts. First part consists of 0, middle part consists of 1
-//followed by 0 and third part consists of 1.
+// break the array into three parts. First part consists of 0, middle part
+// consists of 1 followed by 0 and third part consists of 1.
 int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);

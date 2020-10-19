@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/263/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/263/A
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -24,27 +24,21 @@
 typedef long long ll;
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
     ios_base::sync_with_stdio(false), cin.tie(NULL);
     int arr[5][5];
-    for (int a = 0; a < 5; a++)
-    {
-        for (int b = 0; b < 5; b++)
-        {
+    for (int a = 0; a < 5; a++) {
+        for (int b = 0; b < 5; b++) {
             cin >> arr[a][b];
         }
     }
     int i, j, m, n;
-    for (i = 0; i < 5; i++)
-    {
-        for (j = 0; j < 5; j++)
-        {
-            if (arr[i][j] == 1)
-            {
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            if (arr[i][j] == 1) {
                 m = i;
                 n = j;
             }

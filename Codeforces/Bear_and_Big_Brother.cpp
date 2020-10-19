@@ -1,7 +1,7 @@
 /*
  * Problem Statement: https://codeforces.com/problemset/problem/791/A
  * Author: ganpa
-*/
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,20 +26,17 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
     ios_base::sync_with_stdio(false), cin.tie(NULL);
     int n, k, m = 1;
     cin >> n >> k;
-    while (true)
-    {
+    while (true) {
         n *= 3;
         k *= 2;
-        if (n > k)
-            break;
+        if (n > k) break;
         m++;
     }
     cout << m;

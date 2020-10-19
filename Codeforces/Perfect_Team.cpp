@@ -1,19 +1,17 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/1221/C 
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/1221/C
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 #define endl '\n'
 using namespace std;
 
-int main()
-{
+int main() {
     ios_base::sync_with_stdio(false), cin.tie(0);
     int tc;
     cin >> tc;
-    while (tc--)
-    {
+    while (tc--) {
         int c, m, x;
         cin >> c >> m >> x;
         int ans = min({c, m, x});

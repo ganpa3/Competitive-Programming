@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/118/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/118/A
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -24,20 +24,16 @@
 typedef long long ll;
 using namespace std;
 
-void con(string &ss)
-{
+void con(string &ss) {
     int q = ss.length();
-    for (int i = 0; i < q; i++)
-    {
-        if (ss[i] >= 'A' && ss[i] <= 'Z')
-        {
+    for (int i = 0; i < q; i++) {
+        if (ss[i] >= 'A' && ss[i] <= 'Z') {
             ss[i] += 32;
         }
     }
 }
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -47,19 +43,16 @@ int main()
     string v = "AEIOUYaeiouy";
     string str1 = str;
     int n = str1.length();
-    for (char i : str1)
-    {
+    for (char i : str1) {
         size_t p = v.find(i);
         int pp = str.find(i);
-        if (p != string::npos)
-        {
+        if (p != string::npos) {
             str.erase(str.begin() + pp);
         }
     }
     str1 = str;
     int m = str1.length();
-    for (int i = 0; i < m; i++)
-    {
+    for (int i = 0; i < m; i++) {
         str.insert((i * 2), ".");
     }
     con(str);

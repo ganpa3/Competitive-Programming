@@ -1,7 +1,7 @@
 /*
  * Problem Statement: https://codeforces.com/problemset/problem/208/A
  * Author: ganpa
-*/
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,8 +26,7 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -35,18 +34,14 @@ int main()
     string s, s2;
     cin >> s;
     s2 = s;
-    while (s2.length() != 0)
-    {
+    while (s2.length() != 0) {
         int p = s2.find("WUB");
         if (p == 0)
             s2 = s2.substr(3);
-        else if (p != -1)
-        {
+        else if (p != -1) {
             cout << s2.substr(0, p) << " ";
             s2 = s2.substr(p);
-        }
-        else
-        {
+        } else {
             cout << s2;
             s2.clear();
         }

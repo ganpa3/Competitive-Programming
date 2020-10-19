@@ -10,13 +10,11 @@ typedef long double ld;
 typedef unsigned long long int ull;
 using namespace std;
 
-void solve()
-{
+void solve() {
     int n;
     cin >> n;
     vector<int> even, odd;
-    for (int i = 1; i <= 2 * n; i++)
-    {
+    for (int i = 1; i <= 2 * n; i++) {
         int x;
         cin >> x;
         if (x % 2)
@@ -33,11 +31,9 @@ void solve()
         cout << ans[i].first << " " << ans[i].second << endl;
 }
 
-int main()
-{
+int main() {
     ios_base::sync_with_stdio(false), cin.tie(0), cout.tie(0);
     int tc = 1;
     cin >> tc;
-    while (tc--)
-        solve();
+    while (tc--) solve();
 }

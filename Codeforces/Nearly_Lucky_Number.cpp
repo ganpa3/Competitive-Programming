@@ -1,7 +1,7 @@
 /*
  * Problem Statement: https://codeforces.com/problemset/problem/110/A
  * Author: ganpa
-*/
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,8 +26,7 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -35,10 +34,8 @@ int main()
     int m = 0;
     string n;
     cin >> n;
-    for (char i : n)
-    {
-        if (i == '4' || i == '7')
-            m++;
+    for (char i : n) {
+        if (i == '4' || i == '7') m++;
     }
     if (m == 4 || m == 7)
         cout << "YES";

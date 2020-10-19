@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/112/A
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/112/A
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -24,18 +24,14 @@
 typedef long long ll;
 using namespace std;
 
-void con(string &ss)
-{
+void con(string &ss) {
     int len = ss.length();
-    for (int j = 0; j < len; j++)
-    {
-        if (ss[j] >= 'A' && ss[j] <= 'Z')
-            ss[j] += 32;
+    for (int j = 0; j < len; j++) {
+        if (ss[j] >= 'A' && ss[j] <= 'Z') ss[j] += 32;
     }
 }
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -45,20 +41,14 @@ int main()
     con(s1);
     con(s2);
     int l = s1.length();
-    for (int i = 0; i < l; i++)
-    {
-        if (s1[i] < s2[i])
-        {
+    for (int i = 0; i < l; i++) {
+        if (s1[i] < s2[i]) {
             cout << -1;
             break;
-        }
-        else if (s1[i] > s2[i])
-        {
+        } else if (s1[i] > s2[i]) {
             cout << 1;
             break;
-        }
-        else if (s1 == s2)
-        {
+        } else if (s1 == s2) {
             cout << 0;
             break;
         }

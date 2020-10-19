@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/1304/B
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/1304/B
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,8 +26,7 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -36,21 +35,18 @@ int main()
     set<string> dict;
     int n, m;
     cin >> n >> m;
-    for (int i = 0; i < n; ++i)
-    {
+    for (int i = 0; i < n; ++i) {
         cin >> s[i];
         dict.insert(s[i]);
     }
     vector<string> left, right;
     string mid;
-    for (int i = 0; i < n; ++i)
-    {
+    for (int i = 0; i < n; ++i) {
         string t = s[i];
         reverse(t.begin(), t.end());
         if (t == s[i])
             mid = t;
-        else if (dict.find(t) != dict.end())
-        {
+        else if (dict.find(t) != dict.end()) {
             left.push_back(s[i]);
             right.push_back(t);
             dict.erase(s[i]);
@@ -58,10 +54,8 @@ int main()
         }
     }
     cout << left.size() * m * 2 + mid.size() << "\n";
-    for (string x : left)
-        cout << x;
+    for (string x : left) cout << x;
     cout << mid;
     reverse(right.begin(), right.end());
-    for (string x : right)
-        cout << x;
+    for (string x : right) cout << x;
 }

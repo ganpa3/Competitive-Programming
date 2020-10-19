@@ -1,15 +1,14 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/474/B
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/474/B
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
@@ -17,18 +16,15 @@ int main()
     int n, m;
     cin >> n;
     vector<int> a(n + 1);
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         int x;
         cin >> x;
         a[i] = a[i - 1] + x;
     }
     cin >> m;
     vector<int> b(m);
-    for (int i = 0; i < m; i++)
-        cin >> b[i];
-    for (int i = 0; i < m; i++)
-    {
+    for (int i = 0; i < m; i++) cin >> b[i];
+    for (int i = 0; i < m; i++) {
         auto up = lower_bound(a.begin(), a.end(), b[i]);
         if (up == a.end())
             cout << n << "\n";

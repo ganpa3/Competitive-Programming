@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://codeforces.com/problemset/problem/1324/B
-* Author: ganpa
-*/
+ * Problem Statement: https://codeforces.com/problemset/problem/1324/B
+ * Author: ganpa
+ */
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -26,26 +26,20 @@ typedef long long ll;
 
 using namespace std;
 
-int main()
-{
+int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
 #endif
     int tc;
     scanf("%d", &tc);
-    while (tc--)
-    {
+    while (tc--) {
         int n, m = 0;
         scanf("%d", &n);
         int arr[n];
-        for (int i = 0; i < n; ++i)
-            scanf("%d", &arr[i]);
-        for (int i = 0; i < n - 2; ++i)
-        {
-            for (int j = i + 2; j < n; ++j)
-            {
-                if (arr[i] == arr[j])
-                    m = 1;
+        for (int i = 0; i < n; ++i) scanf("%d", &arr[i]);
+        for (int i = 0; i < n - 2; ++i) {
+            for (int j = i + 2; j < n; ++j) {
+                if (arr[i] == arr[j]) m = 1;
             }
         }
         puts(m == 1 ? "YES" : "NO");
