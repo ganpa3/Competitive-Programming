@@ -1,7 +1,7 @@
 /*
-* Problem Statement: https://www.codechef.com/COOK121B/problems/CHEFNWRK
-* Author: ganpa
-*/
+ * Problem Statement: https://www.codechef.com/COOK121B/problems/CHEFNWRK
+ * Author: ganpa
+ */
 #include <bits/stdc++.h>
 
 #define endl '\n'
