@@ -8,11 +8,11 @@
 	[
 		{
 			"name": "Advanced Run",
-			"cmd": ["x-terminal-emulator", "-e", "bash", "-c", "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector '${file}' -o '${file_path}/${file_base_name}.out' && time '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p 'Press enter to continue...'"]
+			"cmd": ["gnome-terminal", "--", "bash", "-c", "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector '${file}' -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p ''"]
 		},
 		{
 			"name": "Run",
-			"cmd": ["x-terminal-emulator", "-e", "bash", "-c", "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 '${file}' -o '${file_path}/${file_base_name}.out' && time '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p 'Press enter to continue...'"]
+			"cmd": ["gnome-terminal", "--", "bash", "-c", "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 '${file}' -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p ''"]
 		}
 	]
 }
