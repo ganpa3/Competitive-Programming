@@ -10,7 +10,7 @@ fun main() {
             sum += (x - l[i])
             if (l[i] == x) cnt++
         }
-        
+
         if (cnt == n) {
             println(0)
         } else if (sum == 0 || cnt != 0) {

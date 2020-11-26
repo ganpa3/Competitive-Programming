@@ -1,18 +1,36 @@
 {
-	"cmd": ["g++", "-Wall", "-std=c++17", "${file}", "-o", "${file_path}/${file_base_name}.out"],
-	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-	"working_dir": "${file_path}",
-	"selector": "source.c, source.c++, source.cxx, source.cpp",
+  "cmd": [
+    "g++",
+    "-Wall",
+    "-std=c++17",
+    "${file}",
+    "-o",
+    "${file_path}/${file_base_name}.out"
+  ],
+  "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+  "working_dir": "${file_path}",
+  "selector": "source.c, source.c++, source.cxx, source.cpp",
 
-	"variants":
-	[
-		{
-			"name": "Advanced Run",
-			"cmd": ["gnome-terminal", "--", "bash", "-c", "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector '${file}' -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p ''"]
-		},
-		{
-			"name": "Run",
-			"cmd": ["gnome-terminal", "--", "bash", "-c", "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 '${file}' -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p ''"]
-		}
-	]
+  "variants": [
+    {
+      "name": "Advanced Run",
+      "cmd": [
+        "gnome-terminal",
+        "--",
+        "bash",
+        "-c",
+        "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector '${file}' -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p ''"
+      ]
+    },
+    {
+      "name": "Run",
+      "cmd": [
+        "gnome-terminal",
+        "--",
+        "bash",
+        "-c",
+        "g++ -Wall -Wextra --std=c++17 -O2 -Wshadow -Wformat=2 '${file}' -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out' < input.txt |& tee output.txt; read -p ''"
+      ]
+    }
+  ]
 }
