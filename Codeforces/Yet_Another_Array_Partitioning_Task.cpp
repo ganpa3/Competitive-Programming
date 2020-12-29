@@ -51,16 +51,38 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
-void solve() 
-{
-}
-
 int32_t main() {
     ios_base::sync_with_stdio(false), cin.tie(0);
-    int tc;
-    cin >> tc;
-    while (tc--) {
-        solve();
+    int n, m, k;
+    cin >> n >> m >> k;
+    vector<int> a(n), b(n);
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        a[i] = b[i] = x;
+    }
+    sort(all(a));
+
+    ll sum = 0;
+    map<int, int> ma;
+    for (int i = n - 1; i >= n - m * k; i--) {
+        ma[a[i]]++;
+        sum += a[i];
+    }
+    cout << sum << endl;
+
+    k--;
+    int temp = 0;
+    for (int i = 0; i < n && k; i++) {
+        if (ma[b[i]]) {
+            ma[b[i]]--;
+            temp++;
+        }
+        if (temp == m) {
+            temp = 0;
+            cout << i + 1 << " ";
+            k--;
+        }
     }
     return 0;
 }

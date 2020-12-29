@@ -6,7 +6,7 @@ using namespace std;
 #pragma GCC optimize("Ofast")
 #define sz(x) (int)(x).size()
 #define all(v) v.begin(), v.end()
-#define endl '\n'
+#define endl "\n"
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -51,8 +51,28 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
-void solve() 
-{
+ll INF = 1e17;
+
+void solve() {
+    ll n, a, b;
+    string s;
+    cin >> n >> a >> b >> s;
+    vector<vector<ll> > dp(n + 1, vector<ll>(2, INF));
+
+    dp[0][0] = b;
+    for (int i = 0; i < n; i++) {
+        if (s[i] == '0') {
+            dp[i + 1][0] = min(dp[i + 1][0], dp[i][0] + a + b);
+            dp[i + 1][1] = min(dp[i + 1][1], dp[i][0] + 2 * (a + b));
+
+            dp[i + 1][0] = min(dp[i + 1][0], dp[i][1] + 2 * a + b);
+            dp[i + 1][1] = min(dp[i + 1][1], dp[i][1] + a + 2 * b);
+        } else {
+            dp[i + 1][1] = min(dp[i + 1][1], dp[i][1] + a + 2 * b);
+        }
+    }
+    debug(dp);
+    cout << dp[n][0] << endl;
 }
 
 int32_t main() {
