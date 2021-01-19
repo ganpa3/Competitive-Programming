@@ -4,9 +4,11 @@ using namespace std;
 
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimize("Ofast")
+
 #define sz(x) (int)(x).size()
 #define all(v) v.begin(), v.end()
 #define endl '\n'
+
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
