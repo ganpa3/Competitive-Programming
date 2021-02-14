@@ -18,9 +18,8 @@ int32_t main() {
     cin >> n;
     vector<int> dp = {1, 1, 1, 0};
     for (int i = 0; i < n - 1; i++) {
-        vector<int> nw = {
-            (dp[1] + dp[2] + dp[3]) % MOD, (dp[0] + dp[2] + dp[3]) % MOD,
-            (dp[0] + dp[1] + dp[3]) % MOD, (dp[0] + dp[1] + dp[2]) % MOD};
+        vector<int> nw = {(dp[1] + dp[2] + dp[3]) % MOD, (dp[0] + dp[2] + dp[3]) % MOD,
+                          (dp[0] + dp[1] + dp[3]) % MOD, (dp[0] + dp[1] + dp[2]) % MOD};
         dp = nw;
     }
     cout << dp[3] << endl;

@@ -20,8 +20,7 @@ void solve() {
     for (int i = 0; i < n; i++) cin >> a[i];
     bool check = false;
     for (int i = 0; i < n - 1; i++) {
-        if (abs(a[i] - a[i + 1]) >= 2)
-            check = 1, ans[0] = i + 1, ans[1] = i + 2;
+        if (abs(a[i] - a[i + 1]) >= 2) check = 1, ans[0] = i + 1, ans[1] = i + 2;
     }
     if (check) {
         cout << "YES\n";

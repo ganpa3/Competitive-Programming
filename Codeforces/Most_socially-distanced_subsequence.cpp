@@ -19,8 +19,7 @@ void solve() {
     for (auto &it : v) cin >> it;
 
     for (int i = 0; i < n; i++)
-        if (i == 0 || i == n - 1 || (v[i] > v[i - 1]) != (v[i] < v[i + 1]))
-            res.push_back(v[i]);
+        if (i == 0 || i == n - 1 || (v[i] > v[i - 1]) != (v[i] < v[i + 1])) res.push_back(v[i]);
 
     cout << sz(res) << endl;
     for (int i = 0; i < sz(res); ++i) cout << res[i] << " ";

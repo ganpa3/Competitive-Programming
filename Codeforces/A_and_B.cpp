@@ -1,5 +1,5 @@
 /*
- * Problem Statement: https://codeforces.com/problemset/problem/1201/B
+ * Problem Statement: https://codeforces.com/problemset/problem/1278/B
  * Author: ganpa
  */
 #include "bits/stdc++.h"
@@ -65,19 +65,31 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
+void solve() {
+    int a, b;
+    cin >> a >> b;
+    vector<ll> v(N);
+    ++v[1];
+    for (int i = 2; i < N; i++) {
+        v[i] = i + v[i - 1];
+    }
+    ll diff = 2 * max(a, b) - (a + b);
+
+    auto l = lower_bound(all(v), diff) - v.begin();
+    if ((a + b) & 1) {
+        while (v[l] % 2 == 0) l++;
+    } else {
+        while (v[l] & 1) l++;
+    }
+    cout << l << endl;
+}
+
 int32_t main() {
     ios_base::sync_with_stdio(false), cin.tie(0);
-    int n;
-    cin >> n;
-    vector<int> v(n);
-    for (auto& it : v) cin >> it;
-
-    ll ma = *max_element(all(v));
-    ll sum_wo_max = accumulate(all(v), 0LL) - ma;
-
-    if ((sum_wo_max + ma) % 2 == 0 && sum_wo_max >= ma)
-        cout << "YES\n";
-    else
-        cout << "NO\n";
+    int tc;
+    cin >> tc;
+    while (tc--) {
+        solve();
+    }
     return 0;
 }

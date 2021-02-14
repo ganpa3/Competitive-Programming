@@ -17,11 +17,17 @@ typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
 
-string to_string(string s) { return '"' + s + '"'; }
+string to_string(string s) {
+    return '"' + s + '"';
+}
 
-string to_string(const char* s) { return to_string((string)s); }
+string to_string(const char* s) {
+    return to_string((string)s);
+}
 
-string to_string(bool b) { return (b ? "true" : "false"); }
+string to_string(bool b) {
+    return (b ? "true" : "false");
+}
 
 template <typename A, typename B>
 string to_string(pair<A, B> p) {
@@ -43,7 +49,9 @@ string to_string(A v) {
     return res;
 }
 
-void debug_out() { cerr << endl; }
+void debug_out() {
+    cerr << endl;
+}
 
 template <typename Head, typename... Tail>
 void debug_out(Head H, Tail... T) {
@@ -74,7 +82,7 @@ void solve() {
         cin >> x >> y;
         if (x > n) ans *= (1.0 - y);
     }
-    
+
     if (n == 0)
         cout << "1.000000\n";
     else

@@ -29,8 +29,7 @@ int main() {
         }
         int m = v.size(), ans = s.size() + 1;
         for (int i = 1; i < m - 1; i++) {
-            if (v[i - 1].first != v[i + 1].first)
-                ans = min(ans, v[i].second + 2);
+            if (v[i - 1].first != v[i + 1].first) ans = min(ans, v[i].second + 2);
         }
         if (ans == s.size() + 1)
             cout << 0 << endl;

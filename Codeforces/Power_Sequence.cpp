@@ -11,11 +11,17 @@ typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
 
-string to_string(string s) { return '"' + s + '"'; }
+string to_string(string s) {
+    return '"' + s + '"';
+}
 
-string to_string(const char* s) { return to_string((string)s); }
+string to_string(const char* s) {
+    return to_string((string)s);
+}
 
-string to_string(bool b) { return (b ? "true" : "false"); }
+string to_string(bool b) {
+    return (b ? "true" : "false");
+}
 
 template <typename A, typename B>
 string to_string(pair<A, B> p) {
@@ -37,7 +43,9 @@ string to_string(A v) {
     return res;
 }
 
-void debug_out() { cerr << endl; }
+void debug_out() {
+    cerr << endl;
+}
 
 template <typename Head, typename... Tail>
 void debug_out(Head H, Tail... T) {
@@ -53,9 +61,13 @@ void debug_out(Head H, Tail... T) {
 
 const ll INF = 1e17;
 
-inline ll mul(ll a, ll b) { return (INF / a < b ? INF : a * b); }
+inline ll mul(ll a, ll b) {
+    return (INF / a < b ? INF : a * b);
+}
 
-inline ll add(ll a, ll b) { return (a + b > INF ? INF : a + b); }
+inline ll add(ll a, ll b) {
+    return (a + b > INF ? INF : a + b);
+}
 
 int32_t main() {
     ios_base::sync_with_stdio(false), cin.tie(0);

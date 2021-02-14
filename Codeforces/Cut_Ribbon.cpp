@@ -18,7 +18,6 @@ int main() {
     cin >> n >> a >> b >> c;
     for (int i = 0; i <= n; i += a)
         for (int j = 0; j <= n - i; j += b)
-            if ((n - i - j) % c == 0)
-                ans = max(ans, i / a + j / b + (n - i - j) / c);
+            if ((n - i - j) % c == 0) ans = max(ans, i / a + j / b + (n - i - j) / c);
     cout << ans << endl;
 }

@@ -31,8 +31,7 @@ int main() {
     freopen("input.txt", "r", stdin);
 #endif
     ios_base::sync_with_stdio(false), cin.tie(NULL);
-    vector<int> arr = {4,   7,   47,  74,  44,  77,  444,
-                       777, 447, 477, 474, 774, 747, 744};
+    vector<int> arr = {4, 7, 47, 74, 44, 77, 444, 777, 447, 477, 474, 774, 747, 744};
     int n;
     cin >> n;
     int m = 0;

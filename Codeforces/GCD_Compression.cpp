@@ -23,12 +23,9 @@ void solve() {
             even.push_back(i);
     }
     vector<pair<int, int> > ans;
-    for (int i = 0; i < sz(odd) - 1; i += 2)
-        ans.push_back(make_pair(odd[i], odd[i + 1]));
-    for (int i = 0; i < sz(even) - 1; i += 2)
-        ans.push_back(make_pair(even[i], even[i + 1]));
-    for (int i = 0; i < n - 1; i++)
-        cout << ans[i].first << " " << ans[i].second << endl;
+    for (int i = 0; i < sz(odd) - 1; i += 2) ans.push_back(make_pair(odd[i], odd[i + 1]));
+    for (int i = 0; i < sz(even) - 1; i += 2) ans.push_back(make_pair(even[i], even[i + 1]));
+    for (int i = 0; i < n - 1; i++) cout << ans[i].first << " " << ans[i].second << endl;
 }
 
 int main() {

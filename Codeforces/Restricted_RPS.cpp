@@ -13,8 +13,7 @@ void solve() {
     cin >> s;
     vector<int> cnt(26);
     for (int i = 0; i < n; i++) ++cnt[s[i] - 'A'];
-    int wins = min(a, cnt['S' - 'A']) + min(b, cnt['R' - 'A']) +
-               min(c, cnt['P' - 'A']);
+    int wins = min(a, cnt['S' - 'A']) + min(b, cnt['R' - 'A']) + min(c, cnt['P' - 'A']);
 
     if (2 * wins < n) {
         cout << "NO\n";

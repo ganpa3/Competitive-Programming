@@ -35,9 +35,7 @@ int main() {
         int n, k;
         cin >> n >> k;
         // both n and k should either be even or odd and k shoud not exceed n/k
-        bool check =
-            ((n % 2 == 0 && k % 2 == 0) || (n % 2 != 0 && k % 2 != 0)) &&
-            (n / k >= k);
+        bool check = ((n % 2 == 0 && k % 2 == 0) || (n % 2 != 0 && k % 2 != 0)) && (n / k >= k);
         cout << (check ? "YES" : "NO") << "\n";
     }
 }

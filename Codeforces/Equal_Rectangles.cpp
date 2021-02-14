@@ -17,8 +17,7 @@ void solve() {
     bool check = true;
     for (int i = 0; i < n; i++) {
         int l = i * 2, r = 4 * n - i * 2 - 1;
-        if (v[l] != v[l + 1] || v[r] != v[r - 1] || v[l] * v[r] != area)
-            check = false;
+        if (v[l] != v[l + 1] || v[r] != v[r - 1] || v[l] * v[r] != area) check = false;
     }
     puts(check ? "YES" : "NO");
 }

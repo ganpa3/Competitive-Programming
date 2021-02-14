@@ -3,8 +3,7 @@
 using namespace std;
 
 int c;
-void DFS(int x, vector<vector<int>> &graph, vector<int> &cost,
-         vector<bool> &visited) {
+void DFS(int x, vector<vector<int>> &graph, vector<int> &cost, vector<bool> &visited) {
     c = min(c, cost[x]);
     visited[x] = true;
     for (int n = 0; n < (int)graph[x].size(); n++) {

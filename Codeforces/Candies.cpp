@@ -1,5 +1,5 @@
 /*
- * Problem Statement: https://codeforces.com/problemset/problem/1201/B
+ * Problem Statement: https://codeforces.com/problemset/problem/1343/A
  * Author: ganpa
  */
 #include "bits/stdc++.h"
@@ -65,19 +65,25 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
-int32_t main() {
-    ios_base::sync_with_stdio(false), cin.tie(0);
+void solve() {
     int n;
     cin >> n;
-    vector<int> v(n);
-    for (auto& it : v) cin >> it;
+    int i = 2;
+    while (i) {
+        if (n % ((1 << i) - 1) == 0) {
+            cout << n / ((1 << i) - 1) << endl;
+            break;
+        }
+        i++;
+    }
+}
 
-    ll ma = *max_element(all(v));
-    ll sum_wo_max = accumulate(all(v), 0LL) - ma;
-
-    if ((sum_wo_max + ma) % 2 == 0 && sum_wo_max >= ma)
-        cout << "YES\n";
-    else
-        cout << "NO\n";
+int32_t main() {
+    ios_base::sync_with_stdio(false), cin.tie(0);
+    int tc;
+    cin >> tc;
+    while (tc--) {
+        solve();
+    }
     return 0;
 }

@@ -23,8 +23,7 @@ void solve() {
             pr[i] += v1[i];
     }
     int temp = 0;
-    for (int i = 0; i < n; i++)
-        temp = max(temp, pr[i] - (i >= k ? pr[i - k] : 0));
+    for (int i = 0; i < n; i++) temp = max(temp, pr[i] - (i >= k ? pr[i - k] : 0));
     cout << sum + temp << endl;
 }
 
