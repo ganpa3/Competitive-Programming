@@ -6,12 +6,12 @@ using namespace std;
 #pragma GCC optimize("Ofast")
 
 #define sz(x) (int)(x).size()
-#define all(v) v.begin(), v.end()
+#define all(v) (v).begin(), (v).end()
 #define endl '\n'
 
-typedef long long ll;
-typedef long double ld;
-typedef unsigned long long ull;
+using ll = long long;
+using ld = long double;
+using ull =unsigned long long;
 
 string to_string(string s) {
     return '"' + s + '"';
@@ -62,6 +62,6 @@ void debug_out(Head H, Tail... T) {
 #endif
 
 int32_t main() {
-    ios_base::sync_with_stdio(false), cin.tie(0);
+    ios_base::sync_with_stdio(false), cin.tie(nullptr);
     return 0;
 }

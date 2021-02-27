@@ -1,3 +1,7 @@
+/*
+ * Problem Statement: https://codeforces.com/problemset/problem/437/B
+ * Author: ganpa
+ */
 #include "bits/stdc++.h"
 
 using namespace std;
@@ -6,12 +10,12 @@ using namespace std;
 #pragma GCC optimize("Ofast")
 
 #define sz(x) (int)(x).size()
-#define all(v) (v).begin(), (v).end()
+#define all(v) v.begin(), v.end()
 #define endl '\n'
 
-using ll = long long;
-using ld = long double;
-using ull =unsigned long long;
+typedef long long ll;
+typedef long double ld;
+typedef unsigned long long ull;
 
 string to_string(string s) {
     return '"' + s + '"';
@@ -61,15 +65,33 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
-void solve() {
+int L(int x) {
+    return x ^ (x & (x - 1));
 }
 
 int32_t main() {
-    ios_base::sync_with_stdio(false), cin.tie(nullptr);
-    int tc;
-    cin >> tc;
-    while (tc--) {
-        solve();
+    ios_base::sync_with_stdio(false), cin.tie(0);
+    int s, l;
+    cin >> s >> l;
+    vector<pair<int, int>> v(l + 1);
+    vector<int> res;
+    for (int i = 1; i <= l; i++) {
+        v[i].first = L(i);
+        v[i].second = i;
+    }
+    sort(all(v));
+    for (int i = l; i > 0; i--) {
+        if (s >= v[i].first) {
+            s -= v[i].first;
+            res.push_back(v[i].second);
+        }
+    }
+    if (s) {
+        cout << -1 << endl;
+    } else {
+        cout << sz(res) << endl;
+        for (auto& x : res) cout << x << " ";
+        cout << endl;
     }
     return 0;
 }

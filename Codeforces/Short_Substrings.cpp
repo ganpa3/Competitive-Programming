@@ -1,3 +1,7 @@
+/*
+ * Problem Statement: https://codeforces.com/problemset/problem/1367/A
+ * Author: ganpa
+ */
 #include "bits/stdc++.h"
 
 using namespace std;
@@ -6,12 +10,12 @@ using namespace std;
 #pragma GCC optimize("Ofast")
 
 #define sz(x) (int)(x).size()
-#define all(v) (v).begin(), (v).end()
+#define all(v) v.begin(), v.end()
 #define endl '\n'
 
-using ll = long long;
-using ld = long double;
-using ull =unsigned long long;
+typedef long long ll;
+typedef long double ld;
+typedef unsigned long long ull;
 
 string to_string(string s) {
     return '"' + s + '"';
@@ -62,10 +66,14 @@ void debug_out(Head H, Tail... T) {
 #endif
 
 void solve() {
+    string s;
+    cin >> s;
+    for (int i = 0; i < sz(s) - 1; i+=2) cout << s[i];
+    cout << s.back() << endl;
 }
 
 int32_t main() {
-    ios_base::sync_with_stdio(false), cin.tie(nullptr);
+    ios_base::sync_with_stdio(false), cin.tie(0);
     int tc;
     cin >> tc;
     while (tc--) {
