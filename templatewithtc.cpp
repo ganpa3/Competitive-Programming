@@ -11,7 +11,7 @@ using namespace std;
 
 using ll = long long;
 using ld = long double;
-using ull =unsigned long long;
+using ull = unsigned long long;
 
 string to_string(string s) {
     return '"' + s + '"';
