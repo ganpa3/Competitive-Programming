@@ -2,8 +2,9 @@
 
 using namespace std;
 
-#pragma GCC target("avx,avx2,fma")
 #pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC target("avx,avx2,fma")
 
 #define sz(x) (int)(x).size()
 #define all(v) (v).begin(), (v).end()
